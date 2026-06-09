@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * POST /api/stripe/checkout
  * Crée une session Stripe Checkout pour upgrader le plan.

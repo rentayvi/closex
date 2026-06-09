@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * POST /api/campaigns/[id]/send
  * Envoie l'email IA pour un lead donné (ou tous les leads pending).

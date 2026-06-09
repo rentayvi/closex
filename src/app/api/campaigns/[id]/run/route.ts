@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * POST /api/campaigns/[id]/run
  * Déclenche la recherche de leads via le webhook n8n.

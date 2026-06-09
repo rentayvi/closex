@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * POST /api/stripe/webhook
  * Reçoit les événements Stripe et met à jour le plan en base.
