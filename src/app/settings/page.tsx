@@ -1,7 +1,7 @@
 // @ts-nocheck
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Sidebar from '@/components/layout/Sidebar'
 import { createClient } from '@/lib/supabase'
@@ -45,7 +45,7 @@ const PLANS = [
   },
 ]
 
-export default function SettingsPage() {
+function SettingsPage() {
   const supabase = createClient()
   const searchParams = useSearchParams()
   const upgraded = searchParams.get('upgraded')
@@ -219,5 +219,13 @@ export default function SettingsPage() {
         </div>
       </main>
     </div>
+  )
+}
+
+export default function SettingsPageWrapper() {
+  return (
+    <Suspense fallback={<div className="flex h-full items-center justify-center text-gray-400">Chargement...</div>}>
+      <SettingsPage />
+    </Suspense>
   )
 }
